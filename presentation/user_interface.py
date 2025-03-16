@@ -1,5 +1,5 @@
-import os
-from business.business_logic import add_facility, edit_facility, delete_facility, view_facilities
+# presentation/user_interface.py
+from business.business_logic import add_facility, edit_facility, delete_facility, view_facilities, display_records
 from persistence.file_io import read_facility_records, write_facility_records, generate_uuid_filename
 from model.facility import Facility
 
@@ -53,8 +53,7 @@ class UserInterface:
         if not self.facilities:
             print("No records to display.")
         else:
-            for facility in self.facilities:
-                print(facility)
+            display_records(self.facilities)  # Using polymorphic display
 
     def view_record_by_license_number(self):
         license_number = input("Enter License Number to search: ")
