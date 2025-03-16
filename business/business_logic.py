@@ -40,11 +40,11 @@ def view_facilities(facilities: List[Facility], license_number: str = None):
     if license_number:
         for facility in facilities:
             if facility.license_number == license_number:
-                print(facility)  # Display the found facility
+                print(facility.display())  # Display the found facility
                 return
         # If no matching facility is found, print an error message
         print(f"Facility with License Number {license_number} not found.")
     else:
         # If no license number is provided, display all facilities
         for facility in facilities:
-            print(facility)
+            print(facility.display())

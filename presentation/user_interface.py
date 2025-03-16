@@ -69,8 +69,9 @@ class UserInterface:
     # Method to view a specific facility record by License Number
     def view_record_by_license_number(self):
         license_number = input("Enter License Number to search: ")  # Ask for the License Number
-        view_facilities(self.facilities, license_number)  # Search and display the facility record
-
+        # Search and display the facility record
+        view_facilities(self.facilities, license_number)  # This function will handle the display logic
+    
     # Method to add a new facility record
     def add_record(self):
         print("Enter details for the new facility:")
@@ -86,7 +87,7 @@ class UserInterface:
         max_children = input("Max Number of Children: ")
         max_infants = input("Max Number of Infants: ")
         max_preschool = input("Max Number of Preschool-Aged Children: ")
-        max_school_age = input("Max Number of School-Age Children: ")
+        max_school_age = input("Max Number of School-Aged Children: ")
         language_of_service = input("Language of Service: ")
         operator_id = input("Operator ID: ")
         designated_facility = input("Designated Facility (Yes/No): ")
