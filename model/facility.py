@@ -1,5 +1,5 @@
 # models/facility.py
-from models.record import Record
+from model.record import Record
 
 class Facility(Record):
     def __init__(self, region, district, license_number, facility_name, facility_type,

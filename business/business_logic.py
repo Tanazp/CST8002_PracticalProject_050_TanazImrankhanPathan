@@ -1,6 +1,10 @@
 from typing import List
 from model.facility import Facility
 
+def display_records(records):
+    for record in records:
+        print(record.display())
+        
 def add_facility(facilities: List[Facility], facility: Facility) -> List[Facility]:
     facilities.append(facility)
     return facilities
